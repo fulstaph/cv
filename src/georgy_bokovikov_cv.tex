@@ -1,0 +1,97 @@
+\documentclass[a4paper,12pt]{article} \raggedright
+
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[left=15mm,right=13mm,top=8mm,bottom=10mm]{geometry}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks=false, urlcolor=black}
+
+% Switch off page numbering
+\pagenumbering{gobble}
+
+% No indent
+\setlength\parindent{0pt}
+
+\linespread{1.1}
+
+\titleformat{\section}
+{\normalsize\bfseries}
+{}
+{0em}
+{}[\titlerule]
+
+\titlespacing{\section}
+% Left margin
+{0em}
+% Space between
+{1em}
+% Space after
+{1em}
+
+\titleformat{\subsection}
+{\bfseries}
+{}
+{0em}
+{}
+
+\titleformat{\subsubsection}
+{}
+{}
+{0em}
+{}
+
+\renewcommand{\maketitle}{
+    {\Large\bfseries\theauthor}
+    \vspace{.35em}
+
+    {\bfseries\thetitle}
+
+    \vspace{.25em}
+
+    \underline{fulstaph@gmail.com} {\scriptsize$\bullet$}
+    +(995)598915303{\scriptsize$\bullet$}
+    \href{https://www.linkedin.com/in/bokovikovg/}{\underline{LinkedIn}} {\scriptsize$\bullet$}
+    Tbilisi, Georgia 
+}
+
+
+\newenvironment{experienceEntry}[5]{
+    \par
+    \textbf{#1}, #2 \hfill #3
+    \par
+
+    \vspace{0.1em}
+    \textbf{\footnotesize{#4}} % Role
+    \vspace{0.3em}
+    \newline
+    #5 % Description
+}{ }
+
+\newenvironment{educationEntry}[2]{
+    \par
+    #1 \hfill #2
+    \par
+}
+
+
+% Itemize settings
+\renewcommand{\labelitemi}{\tiny$\bullet$}
+\setlist{itemsep=-0.1em, rightmargin=0em, leftmargin=1em, topsep=0em}
+
+\begin{document}
+
+\author{Georgy Bokovikov}
+\title{Golang Backend Developer}
+\maketitle
+
+\input{summary.tex}
+\input{experience/main.tex}
+\input{education.tex}
+\input{skills.tex}
+\input{languages.tex}
+
+\end{document}
