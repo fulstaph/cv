@@ -5,3 +5,4 @@ build/*
 *.aux
 *.fls
 *.fdb_latexmk
+src/georgy_bokovikov_cv.synctex.gz
