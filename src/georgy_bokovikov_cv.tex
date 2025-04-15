@@ -2,7 +2,7 @@
 
 \usepackage{titlesec}
 \usepackage{titling}
-\usepackage[left=15mm,right=13mm,top=8mm,bottom=10mm]{geometry}
+\usepackage[left=15mm,right=13mm,top=0mm,bottom=10mm]{geometry}
 \usepackage{tabularx}
 \usepackage{xcolor}
 \usepackage{enumitem}
@@ -45,19 +45,21 @@
 {}
 
 \renewcommand{\maketitle}{
-    {\Large\bfseries\theauthor}
-    \vspace{.35em}
+    \begin{center}
+        {\Large\bfseries\theauthor}
+        \vspace{.35em}
 
-    {\bfseries\thetitle}
+        {\bfseries\thetitle}
 
-    \vspace{.25em}
+        \vspace{.25em}
 
-    \underline{fulstaph@gmail.com} {\scriptsize$\bullet$}
-    +(995) 598915303 {\scriptsize$\bullet$}
-    \href{https://www.linkedin.com/in/bokovikovg/}{\underline{LinkedIn}} {\scriptsize$\bullet$}
-    \href{https://t.me/fulstaph}{\underline{Telegram}} {\scriptsize$\bullet$}
-    \href{https://github.com/fulstaph}{\underline{GitHub}} {\scriptsize$\bullet$} 
-    Tbilisi, Georgia 
+        \underline{fulstaph@gmail.com} {\scriptsize$\bullet$}
+        +(995) 598915303 {\scriptsize$\bullet$}
+        \href{https://www.linkedin.com/in/bokovikovg/}{\underline{LinkedIn}} {\scriptsize$\bullet$}
+        \href{https://t.me/fulstaph}{\underline{Telegram}} {\scriptsize$\bullet$}
+        \href{https://github.com/fulstaph}{\underline{GitHub}} {\scriptsize$\bullet$} 
+        Tbilisi, Georgia 
+    \end{center}
 }
 
 
@@ -66,10 +68,10 @@
     \textbf{#1}, #2 \hfill #3
     \par
 
-    \vspace{0.1em}
-    \textbf{\footnotesize{#4}} % Role
-    \vspace{0.3em}
-    \newline
+    %\vspace{0.1em}
+    \textbf{\footnotesize{#4}} \\ % Role
+    %\vspace{0.3em}
+    % \newline
     #5 % Description
 }{ }
 
@@ -86,8 +88,11 @@
 
 \begin{document}
 
+\begin{center}
 \author{Georgy Bokovikov}
-\title{Golang Backend Developer}
+\end{center}
+
+\title{Golang Developer}
 \maketitle
 
 \input{summary.tex}
